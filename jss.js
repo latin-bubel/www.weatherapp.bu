@@ -18,8 +18,9 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `Last updated : ${day} ${hours}:${minutes}`;
 }
+
 // Change city via search engine
 
 function displayWeatherCondition(response) {
@@ -107,7 +108,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-      <div class="col-2">
+      <div class="col-sm-2 ">
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
 
  <img
