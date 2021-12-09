@@ -78,10 +78,6 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");
 
-//temperature search
-////////////////////////////////
-
-///////////////////////////////
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
