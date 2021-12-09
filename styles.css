@@ -88,8 +88,36 @@ body {
 }
 
 .source-code {
-  padding: 2px;
-  margin: 20px auto;
+  padding: 0.5px;
+  margin: 5px auto;
   text-align: center;
   color: #575757;
+}
+
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+  margin-left: 50px;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  opacity: 0.8;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
