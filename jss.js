@@ -1,46 +1,26 @@
-let date = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let currentYear = date.getFullYear();
-let currentDay = days[date.getDay()];
-let currentMonth = months[date.getMonth()];
-let currentDate = date.getDate();
-let hours = date.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
-let minutes = date.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
 // Change city via search engine
-
-let timeNow = document.querySelector("#current-time");
-timeNow.innerHTML = `Today is ${currentDay}, ${currentMonth} ${currentDate}, ${currentYear} <br/> ${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");

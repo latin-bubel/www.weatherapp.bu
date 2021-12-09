@@ -29,9 +29,9 @@ body {
 }
 
 .city,
-.date {
+.time {
   color: #080808;
-  line-height: 40px;
+  line-height: 30px;
   display: block;
   text-align: center;
 }
@@ -41,7 +41,7 @@ body {
   font-weight: 600;
   font-size: 24px;
 }
-.date {
+.time {
   font-weight: 400;
   font-size: 20px;
 }
